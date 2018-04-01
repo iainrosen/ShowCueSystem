@@ -42,10 +42,12 @@ while True:
                 break
         while True:
             print "---------------------------------------------------------------------------------------"
+            print "     |Cue Number|        |Cue Description|"
             try:
                 print "     " + cues[pos - 3] + "           " + scs.cread(cues[pos - 3], show)
                 print "     " + cues[pos - 2] + "           " + scs.cread(cues[pos - 2], show)
                 print "     " + cues[pos - 1] + "           " + scs.cread(cues[pos - 1], show)
+                print ""
             except:
                 print " "
             try:
