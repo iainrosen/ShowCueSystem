@@ -21,9 +21,12 @@ while True:
 while True:
     cmd = raw_input("(SHOW OPEN) MainstageCLI>>> ")
     if cmd == "new":
-        cue = raw_input("Cue Number: ")
-        desc = raw_input("Cue Description: ")
-        scs.crec(cue, show, desc)
+        while True:
+            cue = raw_input("Cue Number: ")
+            if cue == "end":
+                break
+            desc = raw_input("Cue Description: ")
+            scs.crec(cue, show, desc)
     if cmd == "play":
         c = raw_input("Play Cue: ")
         if "." not in c:
