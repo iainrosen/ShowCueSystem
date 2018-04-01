@@ -89,7 +89,10 @@ def crec(c, show, desc):
     if "." not in c:
         c = c + ".0"
     cue = ":" + c + ": " + desc
+    s = ":" + str(c) + ":"
+    cdel(c, show)
     wrl(show, cue)
     return 0
+
 print "Show Cue Software"
 print "Iain Rosen"
