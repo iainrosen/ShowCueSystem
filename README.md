@@ -15,3 +15,17 @@ A Python-based Cue Management Library for Stage Managers
 2. You will be greeted with a prompt this will look similar to this ```MainstageCLI>>>```
 3. To start your first show, type ```new``` and follow the prompts
 4. The CLI will enter Open Show mode, and you can now begin building your show
+
+## Create Cues
+1. Once in Open Show mode, you can not start to build your show
+2. To start writing cues, type ```new```
+3. At the first prompt, enter the cue number. The cue number can include one number pass the decimal. Example: ```1.1``` or ```3.8```
+4. At the second prompt, enter the cue description. This can be something like ```Lights Fade Stage Left``` or ```SFX Cue 8 GO```
+5. Repeat this process until you are out of cues to enter
+6. To exit cue recording mode, type ```end``` under the ```Cue Number: ``` prompt
+
+## Playback Mode
+1. To start the playback of your cues, type ```play```
+2. The ```>>>``` indicates which cue is current
+3. Press ```[ENTER]``` to move down the list
+4. Type anything and ```[ENTER]``` to exit playback
