@@ -30,6 +30,8 @@ while True:
             scs.crec(cue, show, desc)
     if cmd == "play":
         c = raw_input("Play Cue: ")
+        os.system("cls")
+        print "Indexing..."
         if "." not in c:
             c = c + ".0"
         cues = scs.read(show)
@@ -44,6 +46,7 @@ while True:
             except:
                 print "No Cue Exists."
                 break
+        os.system("cls")
         while True:
             print "---------------------------------------------------------------------------------------"
             print "   |Cue Number|  |Cue Description|"
