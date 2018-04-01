@@ -18,6 +18,9 @@ while True:
         break
 while True:
     cmd = raw_input("(SHOW OPEN) MainstageCLI>>> ")
+    if cmd == "del":
+        c = raw_input("Delete Cue: ")
+        scs.cdel(c, show)
     if cmd == "new":
         while True:
             cue = raw_input("Cue Number: ")
