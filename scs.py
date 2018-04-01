@@ -65,6 +65,25 @@ def cread(c, show):
             return cue
         else:
             r = r + 1
+def cdel(c, show):
+    if "." not in c:
+        c = c + ".0"
+    showc = openshow(show)
+    s = ":" + str(c) + ":"
+    prod = showc[0].rstrip()
+    auth = showc[1].rstrip()
+    newshow(show, prod, auth)
+    r = 2
+    while True:
+        try:
+            if s not in showc[r]:
+                w = showc[r].rstrip()
+                wrl(show, w)
+                r = r + 1
+            if s in showc[r]:
+                r = r + 1
+        except:
+            break
 def crec(c, show, desc):
     #build the line
     if "." not in c:
