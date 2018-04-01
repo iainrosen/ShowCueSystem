@@ -1,7 +1,5 @@
 import scs
 import os
-print "Mainstage CLI for ShowCueSystem"
-print "Iain Rosen"
 while True:
     cmd = raw_input("MainstageCLI>>> ")
     if cmd == "open":
