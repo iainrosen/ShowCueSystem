@@ -55,8 +55,8 @@ def wrl(f, c):
     except:
         return 1
 def cread(c, show):
-    showc = openshow(show)
     r = 0
+    showc = openshow(show)
     s = ":" + str(c) + ":"
     while True:
         if s in showc[r]:
@@ -65,7 +65,6 @@ def cread(c, show):
             return cue
         else:
             r = r + 1
-
 def crec(c, show, desc):
     #build the line
     if "." not in c:
