@@ -1,2 +1,2 @@
-# ShowCueSystem
+# OpenShowCueSystem
 A Python-based Cue Management Library for Stage Managers
