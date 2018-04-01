@@ -25,7 +25,11 @@ A Python-based Cue Management Library for Stage Managers
 6. To exit cue recording mode, type ```end``` under the ```Cue Number: ``` prompt
 
 ## Playback Mode
-1. To start the playback of your cues, type ```play```
+1. In Open Show mode, start the playback of your cues by typing ```play```
 2. The ```>>>``` indicates which cue is current
 3. Press ```[ENTER]``` to move down the list
 4. Type anything and ```[ENTER]``` to exit playback
+
+## Deleting Cues
+1. To delete a cue, ensure you are in Open Show mode and type ```del```
+2. Enter the number of the cue you wish to delete a press enter
