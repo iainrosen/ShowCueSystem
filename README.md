@@ -33,3 +33,6 @@ A Python-based Cue Management Library for Stage Managers
 ## Deleting Cues
 1. To delete a cue, ensure you are in Open Show mode and type ```del```
 2. Enter the number of the cue you wish to delete a press enter
+
+## Creating an example cue list
+  You can create an randomly generated cue list for testing the program or demonstration. To do so, just run ```examplecreator.py``` and wait for the ```Cues Created:``` message to appear. The example cues are now ready to playback. You can open them in the Mainstage CLI using the show name ```example```
