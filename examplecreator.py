@@ -22,7 +22,7 @@ while True:
     show = "example"
     scs.crec(c, show, desc)
     r = r + 1
-    if r == 500:
+    if r == 100:
         print "Cues Created: " + str(r)
         time.sleep(5)
         break
