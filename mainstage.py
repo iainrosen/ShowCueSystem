@@ -3,8 +3,8 @@ import os
 while True:
     cmd = raw_input("MainstageCLI>>> ")
     if cmd == "open":
-        show = raw_input("Show Name: ")
         try:
+            show = raw_input("Show Name: ")
             ffile = open(show, 'r')
             scap = ffile.readlines()
             prod = scap[0].rstrip()
@@ -14,7 +14,7 @@ while True:
             print "Author: " + auth
             break
         except:
-            print "Error. Show Not Found."
+            print "Show Not Found!"
     if cmd == "new":
         show = raw_input("Show Name: ")
         prod = raw_input("Full Production Name: ")
