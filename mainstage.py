@@ -6,8 +6,9 @@ while True:
         show = raw_input("Show Name: ")
         try:
             ffile = open(show, 'r')
-            prod = ffile.read[0]
-            auth = ffile.read[1]
+            scap = ffile.readlines()
+            prod = scap[0].rstrip()
+            auth = scap[1].rstrip()
             ffile.close()
             print "Production: " + prod
             print "Author: " + auth
