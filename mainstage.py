@@ -26,7 +26,9 @@ while True:
                 os.remove(show)
                 scs.newshow(show, prod, auth)
             else:
-                print "Show Created Successfully."
+                print "Show Creation Failure."
+        else:
+            print "Show Created Successfully."
         break
 while True:
     print "Open Show Mode"
