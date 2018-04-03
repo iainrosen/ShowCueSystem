@@ -32,7 +32,6 @@ while True:
             print "Show Created Successfully."
         break
 while True:
-    scs.cls()
     print "Open Show Mode"
     print ""
     cmd = raw_input("MainstageCLI>>> ")
@@ -42,7 +41,6 @@ while True:
         c = raw_input("Delete Cue: ")
         scs.cdel(c, show)
     if cmd == "new":
-        scs.cls()
         print "Cue Recording Mode. Type 'end' and [ENTER] to exit."
         print ""
         while True:
@@ -53,7 +51,7 @@ while True:
             scs.crec(cue, show, desc)
     if cmd == "play":
         c = raw_input("Play Cue: ")
-        scs.cls()
+        os.system("cls")
         print "Indexing..."
         if "." not in c:
             c = c + ".0"
@@ -69,7 +67,7 @@ while True:
             except:
                 print "No Cue Exists."
                 break
-        scs.cls()
+        os.system("cls")
         while True:
             print "Playback Mode. Type anything and [ENTER] to exit."
             print ""
@@ -98,7 +96,7 @@ while True:
             except:
                 print "End of Cues."
             next = raw_input("Next?")
-            scs.cls()
+            os.system("cls")
             if next != "":
                 break
             else:
