@@ -6,7 +6,11 @@ while True:
         show = raw_input("Show Name: ")
         try:
             ffile = open(show, 'r')
+            prod = ffile.read[0]
+            auth = ffile.read[1]
             ffile.close()
+            print "Production: " + prod
+            print "Author: " + auth
             break
         except:
             print "Error. Show Not Found."
@@ -17,9 +21,9 @@ while True:
         scs.newshow(show, prod, auth)
         break
 while True:
-    cmd = raw_input("(SHOW OPEN) MainstageCLI>>> ")
     print "Open Show Mode"
     print ""
+    cmd = raw_input("MainstageCLI>>> ")
     if cmd == "del":
         c = raw_input("Delete Cue: ")
         scs.cdel(c, show)
