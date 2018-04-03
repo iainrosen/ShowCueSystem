@@ -3,6 +3,8 @@
 import os
 import time
 import sys
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 def openshow(show):
     ffile = open(show, 'r')
     showc = ffile.readlines()
@@ -74,6 +76,7 @@ def cdel(c, show):
     s = ":" + str(c) + ":"
     prod = showc[0].rstrip()
     auth = showc[1].rstrip()
+    os.remove(show)
     newshow(show, prod, auth)
     r = 2
     while True:
