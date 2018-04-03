@@ -57,6 +57,7 @@ while True:
         os.system("cls")
         while True:
             print "Playback Mode. Type anything and [ENTER] to exit."
+            print ""
             print "---------------------------------------------------------------------------------------"
             print "   |Cue Number|  |Cue Description|"
             try:
