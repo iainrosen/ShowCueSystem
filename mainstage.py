@@ -18,7 +18,15 @@ while True:
         show = raw_input("Show Name: ")
         prod = raw_input("Full Production Name: ")
         auth = raw_input("Author: ")
-        scs.newshow(show, prod, auth)
+        if scs.newshow(show, prod, auth) == 1:
+            print "Error. Show Already Exists!"
+            overr = raw_input("Overwrite(Y/N)? ")
+            if overr == "y" or overr == "Y":
+                print "Overwriting Show File..."
+                os.remove(show)
+                scs.newshow(show, prod, auth)
+            else:
+                print "Show Created Successfully."
         break
 while True:
     print "Open Show Mode"

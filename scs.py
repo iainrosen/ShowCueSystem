@@ -15,6 +15,8 @@ def openshow(show):
             break
     return showc
 def newshow(show, prod, auth):
+    if os.path.exists(show) == True:
+        return 1
     ffile = open(show, 'w')
     wrl(show, prod)
     wrl(show, auth)
