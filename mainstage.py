@@ -36,6 +36,8 @@ while True:
     print "Open Show Mode"
     print ""
     cmd = raw_input("MainstageCLI>>> ")
+    if cmd == "exit":
+        sys.exit()
     if cmd == "del":
         c = raw_input("Delete Cue: ")
         scs.cdel(c, show)
