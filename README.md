@@ -8,6 +8,11 @@ A Python-based Cue Management Library for Stage Managers
 3. If you don't have Pythonv2.7 Installed: Run the installer from the OpenSCS folder
 4. OpenSCS is now installed!
 
+## Upgrading OpenSCS
+1. Download the Latest Release: https://github.com/iainrosen/OpenSCS/releases
+2. Open and extract the contents of the downloaded archive
+3. Copy all your show files to the new folders
+4. Finished! You can now use the newest version of OpenSCS
 
 ## Create Your First Show
   OpenSCS uses raw files to manage and save your cues, which are stored in the OpenSCS folder.
