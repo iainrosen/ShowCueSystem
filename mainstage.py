@@ -1,6 +1,7 @@
 import scs
 import os
 import sys
+print "Mainstage CLI v0.4"
 while True:
     cmd = raw_input("MainstageCLI>>> ")
     if cmd == "open":
