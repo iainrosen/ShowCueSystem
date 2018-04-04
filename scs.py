@@ -6,6 +6,7 @@ import sys
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 def openshow(show):
+    r = 0
     ffile = open(show, 'r')
     showc = ffile.readlines()
     ffile.close()
@@ -94,7 +95,6 @@ def crec(c, show, desc):
     if "." not in c:
         c = c + ".0"
     cue = ":" + c + ": " + desc
-    s = ":" + str(c) + ":"
     cdel(c, show)
     wrl(show, cue)
     return 0
