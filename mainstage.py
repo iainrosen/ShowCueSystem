@@ -51,7 +51,7 @@ while True:
             scs.crec(cue, show, desc)
     if cmd == "play":
         c = raw_input("Play Cue: ")
-        os.system("cls")
+        scs.cls()
         print "Indexing..."
         if "." not in c:
             c = c + ".0"
@@ -67,7 +67,7 @@ while True:
             except:
                 print "No Cue Exists."
                 break
-        os.system("cls")
+        scs.cls()
         while True:
             print "Playback Mode. Type anything and [ENTER] to exit."
             print ""
@@ -96,7 +96,7 @@ while True:
             except:
                 print "End of Cues."
             next = raw_input("Next?")
-            os.system("cls")
+            scs.cls()
             if next != "":
                 break
             else:
