@@ -4,6 +4,8 @@ import sys
 print "Mainstage CLI v0.4"
 while True:
     cmd = raw_input("MainstageCLI>>> ")
+    if cmd == "help":
+        print "Help is available online: https://github.com/iainrosen/OpenSCS/blob/release/README.md"
     if cmd == "open":
         try:
             show = raw_input("Show Name: ")
