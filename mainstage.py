@@ -32,6 +32,7 @@ while True:
             print "Show Created Successfully."
         break
 while True:
+    scs.cls()
     print "Open Show Mode"
     print ""
     cmd = raw_input("MainstageCLI>>> ")
@@ -41,6 +42,7 @@ while True:
         c = raw_input("Delete Cue: ")
         scs.cdel(c, show)
     if cmd == "new":
+        scs.cls()
         print "Cue Recording Mode. Type 'end' and [ENTER] to exit."
         print ""
         while True:
