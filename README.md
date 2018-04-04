@@ -28,7 +28,8 @@ A Python-based Cue Management Library for Stage Managers
 1. In Open Show mode, start the playback of your cues by typing ```play```
 2. The ```>>>``` indicates which cue is current
 3. Press ```[ENTER]``` to move down the list
-4. Type anything and ```[ENTER]``` to exit playback
+4. Type ```w``` and ```[ENTER]``` to move back
+5. Type ```q``` and ```[ENTER]``` to exit playback
 
 ## Deleting Cues
 1. To delete a cue, ensure you are in Open Show mode and type ```del```

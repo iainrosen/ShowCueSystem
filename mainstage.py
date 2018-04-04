@@ -72,7 +72,7 @@ while True:
                 break
         scs.cls()
         while True:
-            print "Playback Mode. Type anything and [ENTER] to exit."
+            print "Playback Mode."
             print ""
             print "---------------------------------------------------------------------------------------"
             print "   |Cue Number|  |Cue Description|"
@@ -100,7 +100,9 @@ while True:
                 print "End of Cues."
             next = raw_input("Next?")
             scs.cls()
-            if next != "":
+            if next == "q":
                 break
-            else:
+            if next == "":
                 pos = pos + 1
+            if next == "w":
+                pos = pos - 1
