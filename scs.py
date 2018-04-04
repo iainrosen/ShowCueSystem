@@ -3,7 +3,10 @@
 import os
 import time
 import sys
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 def openshow(show):
+    r = 0
     ffile = open(show, 'r')
     showc = ffile.readlines()
     ffile.close()
@@ -15,6 +18,8 @@ def openshow(show):
             break
     return showc
 def newshow(show, prod, auth):
+    if os.path.exists(show) == True:
+        return 1
     ffile = open(show, 'w')
     wrl(show, prod)
     wrl(show, auth)
@@ -72,6 +77,7 @@ def cdel(c, show):
     s = ":" + str(c) + ":"
     prod = showc[0].rstrip()
     auth = showc[1].rstrip()
+    os.remove(show)
     newshow(show, prod, auth)
     r = 2
     while True:
@@ -89,10 +95,8 @@ def crec(c, show, desc):
     if "." not in c:
         c = c + ".0"
     cue = ":" + c + ": " + desc
-    s = ":" + str(c) + ":"
     cdel(c, show)
     wrl(show, cue)
     return 0
 
-print "Show Cue Software"
-print "Iain Rosen"
+print "OpenSCS v0.9"

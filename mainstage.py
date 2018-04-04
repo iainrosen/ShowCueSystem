@@ -1,27 +1,56 @@
 import scs
 import os
+import sys
+print "Mainstage CLI v0.4"
 while True:
     cmd = raw_input("MainstageCLI>>> ")
+    if cmd == "help":
+        print "Help is available online: https://github.com/iainrosen/OpenSCS/blob/release/README.md"
+    if cmd == "exit":
+        sys.exit()
     if cmd == "open":
-        show = raw_input("Show Name: ")
         try:
+            show = raw_input("Show Name: ")
             ffile = open(show, 'r')
+            scap = ffile.readlines()
+            prod = scap[0].rstrip()
+            auth = scap[1].rstrip()
             ffile.close()
+            print "Production: " + prod
+            print "Author: " + auth
             break
         except:
-            print "Error. Show Not Found."
+            print "Show Not Found!"
     if cmd == "new":
         show = raw_input("Show Name: ")
         prod = raw_input("Full Production Name: ")
         auth = raw_input("Author: ")
-        scs.newshow(show, prod, auth)
+        if scs.newshow(show, prod, auth) == 1:
+            print "Error. Show Already Exists!"
+            overr = raw_input("Overwrite(Y/N)? ")
+            if overr == "y" or overr == "Y":
+                print "Overwriting Show File..."
+                os.remove(show)
+                scs.newshow(show, prod, auth)
+            else:
+                print "Show Creation Failure."
+        else:
+            print "Show Created Successfully."
         break
 while True:
-    cmd = raw_input("(SHOW OPEN) MainstageCLI>>> ")
+    scs.cls()
+    print "Open Show Mode"
+    print ""
+    cmd = raw_input("MainstageCLI>>> ")
+    if cmd == "exit":
+        sys.exit()
     if cmd == "del":
         c = raw_input("Delete Cue: ")
         scs.cdel(c, show)
     if cmd == "new":
+        scs.cls()
+        print "Cue Recording Mode. Type 'end' and [ENTER] to exit."
+        print ""
         while True:
             cue = raw_input("Cue Number: ")
             if cue == "end":
@@ -30,7 +59,7 @@ while True:
             scs.crec(cue, show, desc)
     if cmd == "play":
         c = raw_input("Play Cue: ")
-        os.system("cls")
+        scs.cls()
         print "Indexing..."
         if "." not in c:
             c = c + ".0"
@@ -46,8 +75,10 @@ while True:
             except:
                 print "No Cue Exists."
                 break
-        os.system("cls")
+        scs.cls()
         while True:
+            print "Playback Mode."
+            print ""
             print "---------------------------------------------------------------------------------------"
             print "   |Cue Number|  |Cue Description|"
             try:
@@ -73,8 +104,10 @@ while True:
             except:
                 print "End of Cues."
             next = raw_input("Next?")
-            os.system("cls")
-            if next != "":
+            scs.cls()
+            if next == "q":
                 break
-            else:
+            if next == "":
                 pos = pos + 1
+            if next == "w":
+                pos = pos - 1
