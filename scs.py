@@ -94,6 +94,8 @@ def crec(c, show, desc):
     #build the line
     if "." not in c:
         c = c + ".0"
+    if "[" not in desc:
+        desc = desc + " []"
     cue = ":" + c + ": " + desc
     cdel(c, show)
     wrl(show, cue)
