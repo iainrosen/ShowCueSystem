@@ -101,4 +101,4 @@ def crec(c, show, desc):
     wrl(show, cue)
     return 0
 
-print "OpenSCS v0.9"
+print "OpenSCS v0.9.2"
