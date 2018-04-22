@@ -65,8 +65,10 @@ def cread(c, show):
     s = ":" + str(c) + ":"
     while True:
         if s in showc[r]:
-            cue = showc[r].strip((s + " "))
+            cue = showc[r].strip((s))
             cue = cue.rstrip()
+            if "[]" in cue:
+                cue = cue.strip("[]")
             return cue
         else:
             r = r + 1
