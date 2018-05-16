@@ -46,6 +46,39 @@ while True:
     print "Open Show Mode"
     print ""
     cmd = raw_input("MainstageCLI>>> ")
+    if cmd == "backup":
+        print "Backing Up..."
+        print "Verifying Cue Integrity..."
+        r = 0
+        verif = scs.read(show)
+        while True:
+            try:
+                print "Verifying Cue " + str(verif[r]) + "..."
+                time.sleep(0.1)
+                scs.cls()
+            except:
+                print "End of Cue List."
+                break
+            r = r + 1
+        time.sleep(2)
+        print "Writing Backup..."
+        bshow = show + "_backup"
+        bprod = prod
+        bauth = auth
+        if scs.newshow(bshow, bprod, bauth) == 1:
+            print "Error. Backup Already Exists!"
+            overr = raw_input("Overwrite(Y/N)? ")
+            if overr == "y" or overr == "Y":
+                print "Overwriting Backup File..."
+                os.remove(bshow)
+                scs.newshow(bshow, bprod, bauth)
+            else:
+                print "Show Creation Failure."
+        else:
+            print "Show Created Successfully."
+
+        
+        time.sleep(2)
     if cmd == "exit":
         print "Cleaning Up..."
         os.remove("scs.pyc")
